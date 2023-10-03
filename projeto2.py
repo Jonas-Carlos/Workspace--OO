@@ -1,14 +1,14 @@
 from math import sqrt, pi
 
 class Cubo:
-    def __init__(self, lado):
-        self.lado = lado
+    def __init__(self, aresta):
+        self.aresta = aresta
 
     def calcular_area(self):
-        return 6 * self.lado * self.lado
+        return 6 * self.aresta * self.aresta
 
     def calcular_perimetro(self):
-        return 12 * self.lado
+        return 12 * self.aresta
 
 class Retangulo:
     def __init__(self, comprimento, largura):
@@ -41,7 +41,6 @@ class Piramide:
         return self.base * (self.base + sqrt((self.altura**2) + (self.base/2)**2))
 
     def calcular_perimetro(self):
-        # Considerando que a pirâmide é uma pirâmide de base retangular
         return 4 * self.base
 
 def main():
@@ -54,8 +53,8 @@ def main():
     escolha = int(input("Digite o número correspondente ao sólido desejado: "))
 
     if escolha == 1:
-        lado = float(input("Digite o lado do Cubo: "))
-        cubo = Cubo(lado)
+        aresta = float(input("Digite a aresta do Cubo: "))
+        cubo = Cubo(aresta)
         print("Área do Cubo:", cubo.calcular_area())
         print("Perímetro do Cubo:", cubo.calcular_perimetro())
 
@@ -85,3 +84,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
