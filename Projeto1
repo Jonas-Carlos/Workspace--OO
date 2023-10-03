@@ -1,4 +1,4 @@
-// Definindo as classes para os sólidos geométricos
+// Definição das classes--
 
 Classe Cubo:
   Atributo: lado
@@ -45,7 +45,7 @@ Classe Piramide:
 
 FimClasse
 
-// Programa principal
+// Programa principal--
 
 Função Principal():
   Exibir "Escolha o sólido a ser calculado:"
@@ -54,7 +54,7 @@ Função Principal():
   Exibir "3. Cilindro"
   Exibir "4. Pirâmide"
 
-  // Solicitar a escolha do usuário
+  // Solicitar a escolha do usuário--
   Ler escolha
 
   Se escolha == 1:
@@ -76,7 +76,7 @@ Função Principal():
     Exibir "Perímetro do Retângulo:", retangulo.CalcularPerimetro()
 
   Senão Se escolha == 3:
-    // Cálculos para o Cilindro
+    // Cálculos para o Cilindro--
     Exibir "Digite o raio da base do Cilindro:"
     Ler raioBase
     Exibir "Digite a altura do Cilindro:"
@@ -86,7 +86,7 @@ Função Principal():
     Exibir "Perímetro da base do Cilindro:", cilindro.CalcularPerimetro()
 
   Senão Se escolha == 4:
-    // Cálculos para a Pirâmide
+    // Cálculos para a Pirâmide--
     Exibir "Digite o comprimento da base da Pirâmide:"
     Ler basePiramide
     Exibir "Digite a altura da Pirâmide:"
