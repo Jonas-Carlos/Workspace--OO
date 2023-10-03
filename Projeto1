@@ -1,13 +1,11 @@
-// Definição das classes--
-
 Classe Cubo:
-  Atributo: lado
+  Atributo: aresta
 
   Método CalcularArea():
-    Retorna 6 * lado * lado
+    Retorna 6 * aresta * aresta
 
   Método CalcularPerimetro():
-    Retorna 12 * lado
+    Retorna 12 * aresta
 
 FimClasse
 
@@ -40,12 +38,10 @@ Classe Piramide:
     Retorna base * (base + sqrt((altura^2) + (base/2)^2))
 
   Método CalcularPerimetro():
-    // Considerando que a pirâmide é uma pirâmide de base retangular
+  
     Retorna 4 * base
 
 FimClasse
-
-// Programa principal--
 
 Função Principal():
   Exibir "Escolha o sólido a ser calculado:"
@@ -54,19 +50,19 @@ Função Principal():
   Exibir "3. Cilindro"
   Exibir "4. Pirâmide"
 
-  // Solicitar a escolha do usuário--
+
   Ler escolha
 
   Se escolha == 1:
     // Cálculos para o Cubo
-    Exibir "Digite o lado do Cubo:"
-    Ler lado
-    cubo = Nova Instância de Cubo com lado
+    Exibir "Digite a aresta do Cubo:"
+    Ler aresta
+    cubo = Nova Instância de Cubo com aresta
     Exibir "Área do Cubo:", cubo.CalcularArea()
     Exibir "Perímetro do Cubo:", cubo.CalcularPerimetro()
 
   Senão Se escolha == 2:
-    // Cálculos para o Retângulo--
+    // Cálculos para o Retângulo
     Exibir "Digite o comprimento do Retângulo:"
     Ler comprimento
     Exibir "Digite a largura do Retângulo:"
@@ -76,7 +72,7 @@ Função Principal():
     Exibir "Perímetro do Retângulo:", retangulo.CalcularPerimetro()
 
   Senão Se escolha == 3:
-    // Cálculos para o Cilindro--
+    // Cálculos para o Cilindro
     Exibir "Digite o raio da base do Cilindro:"
     Ler raioBase
     Exibir "Digite a altura do Cilindro:"
@@ -86,7 +82,7 @@ Função Principal():
     Exibir "Perímetro da base do Cilindro:", cilindro.CalcularPerimetro()
 
   Senão Se escolha == 4:
-    // Cálculos para a Pirâmide--
+    // Cálculos para a Pirâmide
     Exibir "Digite o comprimento da base da Pirâmide:"
     Ler basePiramide
     Exibir "Digite a altura da Pirâmide:"
@@ -99,6 +95,5 @@ Função Principal():
     Exibir "Escolha inválida. Por favor, escolha um número válido."
 
 FimFunção
-
 
 
