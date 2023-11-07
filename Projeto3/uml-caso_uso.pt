@@ -1,0 +1,33 @@
++---------------------+
+|    Jogar Partida     |
+|---------------------|
+| - Jogador            |
+| - Alvo               |
+| - Tempo Restante     |
+|---------------------|
+| + Atirar()           |
+| + VerificarColisao() |
+| + ExibirInformacoes()|
++---------------------+
+         ^
+         |
++---------------------+
+|                     |
+| Obter Nomes Jogadores|
+|---------------------|
+| - Jogadores          |
+|---------------------|
+| + CapturarEntrada()  |
+| + ExibirInstrucoes() |
+| + AtualizarTela()    |
++---------------------+
+         ^
+         |
++---------------------+
+| Exibir Vencedor      |
+|---------------------|
+| - Vencedor           |
+|---------------------|
+| + ExibirMensagem()   |
+| + AguardarEncerramento()|
++---------------------+
