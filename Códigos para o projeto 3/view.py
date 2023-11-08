@@ -1,4 +1,3 @@
-# view.py
 import pygame
 import sys
 
