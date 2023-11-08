@@ -11,7 +11,6 @@ if __name__ == "__main__":
 
     view = View(800, 600)
 
-    # Passe a instância de View para o ControladorJogo
     jogo_controller = ControladorJogo(
         Jogo(800, 600, database, view, "alvo.png"),  
         view
