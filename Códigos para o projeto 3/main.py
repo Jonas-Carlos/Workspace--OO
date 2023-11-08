@@ -1,4 +1,3 @@
-# main.py
 import pygame
 import sys
 from model import Jogador, Alvo, Database, Jogo
@@ -10,12 +9,11 @@ if __name__ == "__main__":
 
     database = Database()
 
-    # Crie uma instância de View antes de criar o ControladorJogo
     view = View(800, 600)
 
     # Passe a instância de View para o ControladorJogo
     jogo_controller = ControladorJogo(
-        Jogo(800, 600, database, view, "alvo.png"),  # Adicione o nome da imagem do alvo aqui
+        Jogo(800, 600, database, view, "alvo.png"),  
         view
     )
 
