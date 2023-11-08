@@ -1,4 +1,3 @@
-# controller.py
 import pygame
 import sys
 from model import Jogo
@@ -27,23 +26,17 @@ class ControladorJogo:
 
             self.jogo.alvo.posicao = self.jogo.alvo.gerar_posicao()  # movimenta o alvo para uma nova posição aleatória
 
-            # Limpa a tela
             self.view.tela.fill(self.view.cor_fundo)
 
-            # Exibe o nome do jogador, a contagem de pontos e o tempo restante
             self.view.exibir_info(self.jogo.jogadores[0], tempo_restante, self.jogo.alvo)
 
-            # Desenha o alvo na tela
             self.view.tela.blit(self.jogo.alvo.imagem, self.jogo.alvo.posicao)
 
-            # Atualiza a tela
             pygame.display.flip()
 
-            # Define a taxa de atualização
-            pygame.time.delay(33)  # Aguarda 33 milissegundos (aproximadamente 30 quadros por segundo)
+            pygame.time.delay(33)  
 
-            # Atualiza o tempo restante
-            tempo_restante -= 0.033  # Subtrai 1/30 (aproximadamente 0.033) a cada iteração
+            tempo_restante -= 0.033  
 
         return self.jogo.jogadores[0].pontos
 
