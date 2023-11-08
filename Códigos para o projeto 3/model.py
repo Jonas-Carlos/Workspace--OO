@@ -1,4 +1,3 @@
-# model.py
 import pygame
 import random
 import sys
@@ -37,10 +36,9 @@ class Jogo:
         self.altura_tela = altura_tela
         self.database = database
         self.view = view
-        self.tempo_total = 20  # Tempo total de cada partida em segundos
+        self.tempo_total = 20  
         self.jogadores = [Jogador(""), Jogador("")]
 
-        # Crie uma instância de Alvo passando a imagem do alvo
         self.alvo = Alvo(self.view, imagem_alvo)
 
     def jogar_partida(self):
@@ -61,24 +59,16 @@ class Jogo:
                         self.jogadores[0].pontos += 1
                         self.alvo.posicao = self.alvo.gerar_posicao()
 
-            self.alvo.posicao = self.alvo.gerar_posicao()  # movimenta o alvo para uma nova posição aleatória
-
-            # Limpa a tela
+            self.alvo.posicao = self.alvo.gerar_posicao() 
             self.view.tela.fill(self.view.cor_fundo)
-
-            # Exibe o nome do jogador, a contagem de pontos e o tempo restante
             self.view.exibir_info(self.jogadores[0], tempo_restante, self.alvo)
 
-            # Desenha o alvo na tela
             self.view.tela.blit(self.alvo.imagem, self.alvo.posicao)
 
-            # Atualiza a tela
             pygame.display.flip()
 
-            # Define a taxa de atualização
-            pygame.time.delay(33)  # Aguarda 33 milissegundos (aproximadamente 30 quadros por segundo)
+            pygame.time.delay(33)  # 30 fps
 
-            # Atualiza o tempo restante
-            tempo_restante -= 0.033  # Subtrai 1/30 (aproximadamente 0.033) a cada iteração
+            tempo_restante -= 0.033  
 
         return self.jogadores[0].pontos
